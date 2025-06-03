@@ -13,7 +13,7 @@ def index():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-   data = request.get_json()
+    data = request.get_json()
     url = data.get('url')
     if not url:
         return jsonify({'error': 'No URL provided'}), 400
