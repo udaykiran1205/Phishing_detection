@@ -13,7 +13,10 @@ def index():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    url = request.form['url']
+   data = request.get_json()
+    url = data.get('url')
+    if not url:
+        return jsonify({'error': 'No URL provided'}), 400
     features = extract_features_from_url(url)
     features_scaled = scaler.transform(features)
     prediction = model.predict(features_scaled)
