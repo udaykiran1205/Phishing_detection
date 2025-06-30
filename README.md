@@ -74,6 +74,9 @@ Open your browser and go to: [http://127.0.0.1:5000](http://127.0.0.1:5000)
    - **Build command**: `pip install -r requirements.txt`
    - **Start command**: `python app.py`
 
+The deployed link is --
+# https://phishing-detection1.onrender.com/
+
 ### 🔁 Other Platforms
 
 - Heroku (needs `Procfile`)
